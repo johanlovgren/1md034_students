@@ -1,8 +1,17 @@
 body {
     font-family: arial;
-    font-size: 1.1em
+    font-size: 1.1em;
 }
 
 .desc {
-    font-weight: bold
+    font-weight: bold;
+}
+
+#select_burger {
+    background-color: black;
+    color: white;
+}
+
+#customer_information {
+    
 }
