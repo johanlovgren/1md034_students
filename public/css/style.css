@@ -1,6 +1,7 @@
 body {
     font-family: arial;
     font-size: 1.1em;
+    margion: 0 auto;
 }
 
 .desc {
@@ -19,4 +20,12 @@ body {
 button:hover {
     background-color:gray;
     cursor:pointer;
+}
+
+table {
+    width: 75%;
+    text-align: center;
+}
+ul {
+    text-align: left;
 }
