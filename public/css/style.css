@@ -14,7 +14,6 @@ body {
 }
 
 #customer_information {
-    
 }
 
 button:hover {
@@ -26,6 +25,18 @@ table {
     width: 75%;
     text-align: center;
 }
+
 ul {
     text-align: left;
 }
+
+section {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+button {
+    margin-top: 2em;
+}
+
+
