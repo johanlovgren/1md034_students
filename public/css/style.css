@@ -1,6 +1,6 @@
 body {
     font-family: arial;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     margion: 0 auto;
 }
 
@@ -12,12 +12,12 @@ body {
     background-color: black;
     color: white;
     border: 2px dashed white;
-    padding-left: 1.1em;
+    padding-left: 1.1rem;
 }
 
 #customer_information {
     border: 2px dashed black;
-    padding-left: 1.1em;
+    padding-left: 1.1rem;
 }
 
 button:hover {
@@ -35,18 +35,28 @@ ul {
 }
 
 section {
-    margin: 1.5em 1.2em;
+    margin: 1.5rem 1.2rem;
 
 }
 
 button {
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
+
 header {
-    margin: 1.5em 1.2em;
+    margin: 1.5rem 1.2rem;
+    height: 5cm;
+    overflow: hidden;
 }
 
 #header_pic{
     opacity: 0.8;
+    width: 100%;
+    height: auto;
+}
+
+#head_text {
+    position: absolute;
+    padding: 1cm 15cm;
 }
