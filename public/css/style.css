@@ -35,13 +35,18 @@ ul {
 }
 
 section {
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
+    margin: 1.5em 1.2em;
+
 }
 
 button {
     margin-top: 2em;
     margin-bottom: 2em;
 }
+header {
+    margin: 1.5em 1.2em;
+}
 
-
+#header_pic{
+    opacity: 0.8;
+}
