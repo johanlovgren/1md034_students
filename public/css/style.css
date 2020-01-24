@@ -1,6 +1,6 @@
 body {
     font-family: arial;
-    font-size: 1.1rem;
+    font-size: 1.1em;
     margion: 0 auto;
 }
 
@@ -17,7 +17,7 @@ body {
 
 #customer_information {
     border: 2px dashed black;
-    padding-left: 1.1rem;
+    padding-left: 1.1em;
 }
 
 button:hover {
@@ -25,27 +25,17 @@ button:hover {
     cursor:pointer;
 }
 
-table {
-    width: 75%;
-    text-align: center;
-}
-
-ul {
-    text-align: left;
-}
-
 section {
-    margin: 1.5rem 1.2rem;
-
+    margin: 1.5em 1.2em;
 }
 
 button {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 header {
-    margin: 1.5rem 1.2rem;
+    margin: 1.5em 1.2em;
     height: 5cm;
     overflow: hidden;
 }
@@ -59,4 +49,24 @@ header {
 #head_text {
     position: absolute;
     padding: 1cm 15cm;
+}
+
+ul {
+    text-align: left;
+}
+.table_wrapper {
+    display: grid;
+    grid-gap: 50px;
+    text-align: center;
+    grid-template-columns: 200px 200px 200px;
+}
+
+.a {
+    grid-column: 1 ;
+}
+.b {
+    grid-column: 2 ;
+}
+.c {
+    grid-column: 3 ;
 }
