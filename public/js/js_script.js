@@ -15,8 +15,8 @@ let b3 = new menuItem('Burger3', '11750 kCal', 'Super tasty', 'Contains dead ani
 let b4 = new menuItem('Burger4', '111750 kCal', 'Super tasty', 'Contains dead animals', 'https://i2.wp.com/www.vegrecipesofindia.com/wp-content/uploads/2015/05/veggie-burger-recipe-5.jpg');
 let b5 = new menuItem('Burger5', '750 kCal', 'Super tasty', 'Contains dead animals', 'https://i2.wp.com/www.vegrecipesofindia.com/wp-content/uploads/2015/05/veggie-burger-recipe-5.jpg');
 
-console.log( b1.getName() );
-console.log( b2.getName() );
-console.log( b3.getName() );
-console.log( b4.getName() );
-console.log( b5.getName() );
+document.getElementById("b1").innerHTML = b1.getName()
+document.getElementById("b2").innerHTML = b2.getName()
+document.getElementById("b3").innerHTML = b3.getName()
+document.getElementById("b4").innerHTML = b4.getName()
+document.getElementById("b5").innerHTML = b5.getName()
