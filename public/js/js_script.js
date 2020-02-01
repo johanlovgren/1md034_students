@@ -20,3 +20,29 @@ document.getElementById("b2").innerHTML = b2.getName()
 document.getElementById("b3").innerHTML = b3.getName()
 document.getElementById("b4").innerHTML = b4.getName()
 document.getElementById("b5").innerHTML = b5.getName()
+
+let menu = [b1,b2,b3,b4,b5]
+
+let myElement = document.getElementById("burgers");
+for (var x in menu)
+{
+		var burger = menu[x];
+    var burgerStr = burger.name + 
+    	' ' + burger.kcal + 
+      ' ' + burger.desc1;
+    if (burger.deadAnimals)
+    {    		
+    	burgerStr = burgerStr + ' ' + burger.desc2;				
+    }
+    
+   	let listItem = document.createElement("li");
+   	let listValue = document.createTextNode(burgerStr); 
+   	listItem.appendChild(listValue);
+    myElement.appendChild(listItem);
+}
+/*
+<div>
+  <ol id = "burgers">
+  </ol>
+</div>
+*/

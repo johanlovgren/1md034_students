@@ -5,37 +5,29 @@ const vm = new Vue({
   }
 })
 
-const burg1 = new Vue({
-  el: '#b1',
+const burg = new Vue({
+  el: '#burg',
   data: {
-    b1: b1.getName()
+      b1: b1.getName()
+      b2: b2.getName()
+      b3: b3.getName()
+      b4: b4.getName()
+      b5: b5.getName()
   }
 })
 
-const burg2 = new Vue({
-  el: '#b2',
-  data: {
-    b2: b2.getName()
-  }
-})
+const vm3 = new Vue({
+    el: '#burgers',
+    data: {
+        menu: menu
+    },
+});
 
-const burg3 = new Vue({
-  el: '#b3',
-  data: {
-    b3: b3.getName()
-  }
-})
-
-const burg4 = new Vue({
-  el: '#b4',
-  data: {
-    b4: b4.getName()
-  }
-})
-
-const burg5 = new Vue({
-  el: '#b5',
-  data: {
-    b5: b5.getName()
-  }
-})
+/*
+Loop the burgers in HTML
+<div id = 'burgers'>
+  <li v-for="(x, index) in menu">
+     {{ x.name }} {{ x.kcal }} {{ x.desc1 }}<span v-if="x.deadAnimals"> {{ x.desc2 }}</span>
+  </li>
+</div>
+*/
