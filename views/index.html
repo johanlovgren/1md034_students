@@ -22,8 +22,24 @@
         <section id="select_burger">          
           <h2>Select burger</h2>
           <p>This is where you execute burger selection</p>
-          <div id = "table_wrapper" class = "table_wrapper"></div>          
+          <!--
+          <div id = "table_wrapper" class = "table_wrapper"></div>
+          -->
+          
+          <div id = "burgers" class = "table_wrapper">
+            <div v-for="(x, index) in menu">
+              <h4> {{ x.name }}</h4>
+              <img :src="x.image" width="250" height="175">
+              <ul>
+                <li> {{ x.kcal }} </li>
+                <li> {{ x.desc1 }} </li>
+                <li> {{ x.desc2 }} </li>
+              </ul>
+            </div>
+          </div>
+          
         </section>
+        
         <section id="customer_information">
           <h2>Customer information</h2>
           <p>This is where you provide necessary information</p>
