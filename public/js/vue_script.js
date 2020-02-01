@@ -1,3 +1,4 @@
+/*
 const vm = new Vue({
   el: '#myID',
   data: {
@@ -22,6 +23,8 @@ const vm3 = new Vue({
         menu: menu
     },
 });
+*/
+
 
 /*
 Loop the burgers in HTML
