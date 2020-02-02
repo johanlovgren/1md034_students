@@ -5,6 +5,7 @@
       <title>Order your burger</title>
       <meta charset="utf-8"/>
       <link rel="stylesheet" type="text/css" href="css/style.css">
+      <script type="text/javascript" src="js/menu.js"></script>.
       <script src="js/js_script.js" defer></script>
       <script src="js/vue_script.js" defer></script>
       <script src="https://vuejs.org/js/vue.js"></script>
@@ -27,11 +28,11 @@
           -->
           
           <div id = "burgers" class = "table_wrapper">
-            <div v-for="(x, index) in menu">
+            <div v-for="(x, index) in food">
               <h4> {{ x.name }}</h4>
               <img :src="x.image" width="250" height="175">
               <ul>
-                <li> {{ x.kcal }} </li>
+                <li> {{ x.kcal }} kCal</li>
                 <li> {{ x.desc1 }} </li>
                 <li> {{ x.desc2 }} </li>
               </ul>
