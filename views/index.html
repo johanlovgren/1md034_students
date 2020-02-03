@@ -12,8 +12,7 @@
   </head>
   
     <body>      
-      <main>
-        
+      <main id="site">        
         <header>
           <h1 id="head_text">Welcome to BurgerOnline</h1>
         <img src="https://www.gallerian.se/contentassets/667a269d11524a339d2153c2274a16e3/bastard-burgers-header.jpg?preset=16x8-1200&version=63697923645"
@@ -23,13 +22,16 @@
         <section id="select_burger">          
           <h2>Select burger</h2>
           <p>This is where you execute burger selection</p>
+
           <!--
           <div id = "table_wrapper" class = "table_wrapper"></div>
           -->
           
-          <div id = "burgers" class = "table_wrapper">
+          <div id="burgers" class="table_wrapper">
             <div v-for="(x, index) in food">
               <h4> {{ x.name }}</h4>
+              <input type="checkbox" :value="x.name" :id="x.name" v-model="checkedBurgers">
+              <br />
               <img :src="x.image" width="250" height="175">
               <ul>
                 <li> {{ x.kcal }} kCal</li>
@@ -38,14 +40,77 @@
               </ul>
             </div>
           </div>
-          
         </section>
         
         <section id="customer_information">
           <h2>Customer information</h2>
           <p>This is where you provide necessary information</p>
           <h3>Delivery information</h3>
-          <form>
+          <div id="form">
+            <form>
+              <p>
+                <label for="fullname">Full name</label><br />
+                <input v-model="fullname" required="required"
+                       placeholder="First- and Last name">
+              </p>
+              <p>
+                <label for="email">E-mail</label><br />
+                <input v-model="email" required="required"
+                       placeholder="E-mail adress">
+              </p>
+              <p>
+                <label for="street">Street</label><br />
+                <input v-model="street" required="required"
+                       placeholder="Street name">
+              </p>
+              <p>
+                <label for="house">House</label><br />
+                <input v-model="house" required="required"
+                       placeholder="House number"> 
+              </p>
+              <p>
+                <label for="recipient"> Payment option</label><br />
+                <select v-model="recipient" id="recipient">
+                  <option disabled value="">Please select one</option>
+                  <option>Credit card</option>
+                  <option>Bitcoin</option>
+                  <option>Cash</option>
+                  <option>Monopoly money</option>
+                </select>
+              </p>
+              <p>
+                <label for="gender">Gender</label><br />
+                <input type="radio" id="male" value="male"
+                       v-model="gender" name="gender" checked="checked">
+                <label for="male">Male</label><br />
+                <input type="radio" id="female" value="female"
+                       v-model="gender" name="gender">
+                <label for="male">Female</label><br />
+                <input type="radio" id="none" value="none"
+                       v-model="gender" name="gender">
+                <label for="male">Something else</label><br />
+              </p>
+            </form>
+
+            <div>
+              <button v-on:click="markDone()">Order</button>
+              <span v-if="showOrder"> Your order:
+                {{ checkedBurgers }} {{ fullname }}
+                {{ email }} {{ street }} {{ house }}
+                {{ recipient }} {{ gender }}                
+              </span>
+            </div>             
+          </div>
+        </section>
+      </main>
+      <footer>
+        <hr>
+        &copy 2020 Burgers Inc
+      </footer>
+    </body>
+</html>
+
+            <!--
             <p>            
               <label for="fullname">Full name</label><br />
               <input type ="text" id="fullname" name="name"
@@ -77,19 +142,9 @@
             </p>
             <p>            
               <label for="gender">Gender</label><br />
-              <input checked="checked" type="radio" name="gender" value="male"
+              <input id="gender" checked="checked" type="radio" name="gender" value="male"
                      required="required"> Male<br />
               <input type="radio" name="gender" value="female"> Female<br />
               <input type="radio" name="gender" value="none"> Do not wish to provide<br />            
-            </p>            
-          </form>
-          <button type"submit">Send Info</button>
-          </button>
-        </section>
-      </main>
-      <footer>
-        <hr>
-        &copy 2020 Burgers Inc
-      </footer>
-    </body>
-</html>
+            </p>
+            -->
