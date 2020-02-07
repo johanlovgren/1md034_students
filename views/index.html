@@ -5,7 +5,9 @@
       <title>Order your burger</title>
       <meta charset="utf-8"/>
       <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" href="css/deli-very.css">
       <script type="text/javascript" src="js/menu.js"></script>.
+      <script src="/socket.io/socket.io.js" defer></script>
       <script src="js/js_script.js" defer></script>
       <script src="js/vue_script.js" defer></script>
       <script src="https://vuejs.org/js/vue.js"></script>
@@ -58,6 +60,7 @@
                 <input v-model="email" required="required"
                        placeholder="E-mail adress">
               </p>
+              <!--
               <p>
                 <label for="street">Street</label><br />
                 <input v-model="street" required="required"
@@ -68,6 +71,7 @@
                 <input v-model="house" required="required"
                        placeholder="House number"> 
               </p>
+              -->
               <p>
                 <label for="recipient"> Payment option</label><br />
                 <select v-model="recipient" id="recipient">
@@ -90,6 +94,17 @@
                        v-model="gender" name="gender">
                 <label for="male">Something else</label><br />
               </p>
+              <h1> Click in the map! </h1>
+              <a href="/dispatcher" target="_blank">Open dispatcher in new window</a>.
+              <div class="view-box">
+                <div id="dots" v-on:click="addOrder">
+                  <div 
+                    v-for="(order, key) in orders"
+                    v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+                    {{key}}
+                  </div>
+                </div>
+              </div>
             </form>
 
             <div>
