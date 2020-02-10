@@ -30,8 +30,7 @@ section {
 }
 
 button {
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin: 2em;
 }
 
 header {
@@ -71,4 +70,6 @@ ul {
     grid-column: 3 ;
 }
 
-
+#showOrder {
+    margin-left: 2em;
+}

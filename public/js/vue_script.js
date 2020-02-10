@@ -26,13 +26,9 @@ const form = new Vue({
             return this.numberOfOrders;
         },
         addOrder: function(event) {
-            /* When you click in the map, a click event object is sent as parameter
-             * to the function designated in v-on:click (i.e. this one).
-             * The click event object contains among other things different
-             * coordinates that we need when calculating where in the map the click
-             * actually happened. */
             
             ++this.numberOfOrders;
+            this.showOrder = true;
             socket.emit('addOrder',{
                 
                 orderId: this.getNext(),
@@ -41,6 +37,7 @@ const form = new Vue({
                     y: this.order.details.y
                 },
                 orderItems: this.checkedBurgers,
+                orderInformation: [this.fullname, this.email, this.recipient, this.gender]
             });
             console.log({
                 
