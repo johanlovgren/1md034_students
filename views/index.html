@@ -97,18 +97,15 @@
               <h1> Click in the map! </h1>
               <a href="/dispatcher" target="_blank">Open dispatcher in new window</a>.
               <div class="view-box">
-                <div id="dots" v-on:click="addOrder">
-                  <div 
-                    v-for="(order, key) in orders"
-                    v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
-                    {{key}}
+                <div id="dots" v-on:click="displayOrder">                  
+                    <div v-if=order.visible  v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+                    T
                   </div>
                 </div>
               </div>
             </form>
-
             <div>
-              <button v-on:click="markDone()">Order</button>
+              <button v-on:click="addOrder()">Order</button>
               <span v-if="showOrder"> Your order:
                 {{ checkedBurgers }} {{ fullname }}
                 {{ email }} {{ street }} {{ house }}
